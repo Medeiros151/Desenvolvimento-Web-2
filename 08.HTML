@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPobre</title>
+    <style>
+        h1{
+            color: blueviolet;
+            display: flex;
+            justify-content:center;
+            font-size: 100px;
+        }
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+        label{
+             display: flex;
+            justify-content:center;
+            font-size: 25px;
+        }
+        button{
+             display: flex;
+            justify-content:center;
+            font-size: 20px;
+        }
+        form{
+             display: flex;
+            justify-content:center;
+            font-size: 25px;
+        }
+        p{
+            display: flex;
+            font-size: 20px;
+        }
+        if{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>ChatGpobre &#x1F4B8&#x1FACF</h1>
+    <form id="0">
+        <label for="input1"></label>
+        <input type="text" id="input1" required>
+        <button type="submit"> Pesquisa &#x1F50D</button>
+    </form>
+
+    <div>
+        <p id="obrig">
+            <h3>Conteúdos Dísponiveis</h3>
+            <p>- Computação na Nuvem;<br>
+            - Infraestrutura de TI; <br>
+            - SaaS;<br>
+            - PaaS;<br>
+            - IaaS;<br>
+            - Virtualização.</p>
+        </p>
+    </div>
+
+    <p id="mostrar"></p>
+     
+     <script>
+        const form = document.getElementById('0');
+        const mostrar = document.getElementById('mostrar');
+
+        form.addEventListener('submit', function (event){
+            event.preventDefault();
+            const obrig = document.getElementById('obrig');
+
+            let numero1 = document.getElementById('input1').value;
+
+            if(numero1 == "Computação na Nuvem"){
+               mostrar.innerText="Computação em nuvem (em inglês, cloud computing) é um termo coloquial para a disponibilidade sob demanda de recursos do sistema de computador, especialmente armazenamento de dados e capacidade de computação, sem o gerenciamento ativo direto do utilizador. O termo geralmente é usado para descrever centros de dados disponíveis para muitos utilizadores pela Internet. Nuvens em grande escala, predominantes hoje em dia, geralmente têm funções distribuídas em vários locais dos servidores centrais. Se a conexão com o utilizador for relativamente próxima, pode ser designado um servidor de borda.";
+            }
+            else if (numero1 == " Infraestrutura de TI"){
+                 mostrar.innerText="A infraestrutura de TI consiste nos componentes e serviços que fornecem a base para sustentar todos os sistemas de informação de uma organização. Ter uma organização competitiva exige uma grande variedade de equipamentos, softwares e ferramentas de comunicação para funcionar e fazer o básico, além dos serviços de profissionais treinados que saibam operar e administrar toda essa tecnologia. Cada organização deve projetar e administrar cuidadosamente sua infraestrutura, de modo que ela contenha o conjunto de serviços tecnológicos necessários para o trabalho que se quer realizar.Os componentes (também conhecidos como plataforma) são divididos em hardware, software e tecnologias de comunicação e providenciam a base de todo o sistema. O profissional de TI usa estes componentes para gerar serviços, que incluem gerenciamento de dados, desenvolvimento de sistemas e novos métodos de segurança.";
+            }
+            else if (numero1 == "SaaS"){
+                 mostrar.innerText="Software como serviço, do inglês Software as a service (SaaS), é uma forma de distribuição e comercialização de software. No modelo SaaS, o fornecedor do software se responsabiliza por toda a estrutura necessária à disponibilização do sistema (servidores, conectividade, cuidados com segurança da informação), e o cliente utiliza o software via internet, pagando um valor pelo serviço.O modelo SaaS oferece software como serviço com propósitos específicos que estão disponíveis para os usuários na Internet. Os sistemas de software são acessíveis a partir de vários dispositivos por meio de uma interface cliente em uma rede de modelo cliente-servidor como um navegador Web. No SaaS, o usuário não administra as características individuais da aplicação, exceto configurações específicas. Sendo assim, os desenvolvedores se concentram em atualização e não na infraestrutura, levando ao desenvolvimento rápido de sistemas de software.";
+            }
+            else if(numero1 == "PaaS"){
+                 mostrar.innerText="PaaS — platform as a service — em computação, consiste no serviço propriamente dito de hospedagem e implementação de hardware e software, que é usado para prover aplicações (software como serviço) por meio da Internet. Oferece a possibilidade de substituir o paradigma de aplicações tradicional, no qual programas de computador são instalados na máquina do usuário e ficam assim muito mais restritos às configurações de hardware e software disponíveis nela, principalmente ao sistema operacional.Plataforma como serviço é uma das  principais formas de contratar a Computação em Nuvem. Considerada um meio termo entre a IaaS - infraestrutura como serviço e SaaS- software como serviço, a plataforma como serviço oferece as licenças de software, infraestrutura, manutenção, sistemas de comunicação e tudo o mais que for necessário para a publicação de um aplicativo/site. A liberdade de configuração e utilização vai depender do fornecedor de PaaS - se for mais ou menos flexível no quanto o usuário pode configurar da plataforma.";
+            }
+            else if(numero1 == "IaaS"){
+                 mostrar.innerText="Em computação em nuvem, a Infraestrutura como Serviço (do inglês Infrastructure as a Service) conhecido pelo acrônimo IaaS, é uma infraestrutura que fornece um serviço de um computador servidor através da Internet.Facilitar o acesso aos recursos de computação para ter um ambiente sob demanda (sistemas operacionais e aplicativos).A IaaS é um dos quatro tipos de serviços em nuvem, junto com Software como serviço (SaaS), Plataforma como serviço (PaaS) e Sem Servidor (Serverless).O usuário pode usar recursos, como por exemplo armazenamento por rede, diminuindo custo com a manutenção da infraestrutura terceirizada.A infraestrutura como serviço também fornecem API avançadas que facilitam detalhes de baixo nível da infra-estrutura, como por exemplo recursos físicos computacionais, particionamento dos dados, segurança. Como o Xen, o Oracle VirtualBox, o Oracle VM, o KVM, o VMware ESX / ESXi ou o Hyper-V, LXD, executam as máquinas virtuais como convidados.";
+            }
+            else if(numero1 == "Virtualização"){
+                 mostrar.innerText="Em computação, virtualização é o ato de criar uma versão virtual (ao invés de real) de algo, incluindo a simulação de uma plataforma de hardware, sistema operacional, dispositivo de armazenamento ou recursos de rede.A virtualização começou na década de 1960, como um método de dividir logicamente os recursos do sistema fornecidos pelos computadores mainframe entre diferentes aplicações. Desde então, o significado do termo foi ampliado.É a tecnologia central de datacenters e essencialmente transforma, obedecidas certas condições, um servidor físico em vários servidores virtuais.Os servidores virtuais criados com a virtualização oferecem um ambiente similar ao de um servidor físico e otimizam o uso de recursos, tornando as aplicações independentes do hardware. O principal motivo apontado pelas organizações para fazerem uso da virtualização tem sido a redução de custos de hardware, a melhoria da condição de recuperação a desastres e a economia de espaço para datacenters.";
+            }
+        })
+    </script>
+   
+</body>
+</html>
